@@ -12,8 +12,8 @@ from RVFL import RVFL
 model = RVFL()
 model.initialize_random(feature_size=20, hidden_nodes=100)
 model.fit(train_data, train_label, regularization_param=0.0312)
-predictions = model.predict(test_data,0.5)
-model.evaluate(predictions, test_label)
+predictions = model.predict(test_data, threshold =0.5)
+accuracy = model.evaluate(predictions, test_label)
 ```
 
 ## Extreme Learning Machine - ELM
@@ -29,8 +29,8 @@ from ELM import ELM
 model = ELM()
 model.initialize_random(feature_size=20, hidden_nodes=100)
 model.fit(train_data, train_label)
-predictions = model.predict(test_data,0.5)
-model.evaluate(predictions, test_label)
+predictions = model.predict(test_data, threshold = 0.5)
+accuracy = model.evaluate(predictions, test_label)
 ```
 
 ## Weighted Extreme Learning Machine - WELM
@@ -46,7 +46,7 @@ from WELM import WELM
 model = WELM()
 model.initialize_random(feature_size=20, hidden_nodes=100)
 model.fit(train_data, train_label)
-predictions = model.predict(test_data,0.5)
-model.evaluate(predictions, test_label)
+predictions = model.predict(test_data, threshold = 0.5)
+accuracy = model.evaluate(predictions, test_label)
 ```
 
