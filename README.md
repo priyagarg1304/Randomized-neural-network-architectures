@@ -1,1 +1,5 @@
-# Randomized-neural-network-architectures
+## Randomized-neural-network-architectures (RNNAs)
+
+# Weighted Extreme Learning Machine - WELM
+
+WELM is a special kind of RNNA which handles class imbalance using an addition weight matrix. 
