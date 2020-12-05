@@ -67,7 +67,3 @@ class WELM:
         zero+=1
     return out
 
-clf = WELM(hidden_layers = 80)
-clf.fit(X_train,Y_train)
-y_pred = clf.predict(X_test, 0.5)
-print(evaluate(y_pred, Y_test))
