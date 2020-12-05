@@ -54,7 +54,7 @@ class WELM:
     return acc
 
   # Using beta matrix to evaluate the final expected output
-  def predict(self,data,labels, threshold):
+  def predict(self,data, threshold):
     out= sigmoid(np.dot(sigmoid(np.dot(data,self.w)+self.b.transpose()),self.beta))
     ones = 0
     zero = 0
@@ -69,4 +69,5 @@ class WELM:
 
 clf = WELM(hidden_layers = 80)
 clf.fit(X_train,Y_train)
-clf.predict(X_test, Y_test, 0.5)
+y_pred = clf.predict(X_test, 0.5)
+print(evaluate(y_pred, Y_test))
