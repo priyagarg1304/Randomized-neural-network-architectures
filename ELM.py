@@ -13,8 +13,6 @@ def gaussian(x):
   x = np.exp(-pow(x, 2.0)) 
   return x
 
-# Number of nodes in hidden layer of ELM 
-hidden_nodes = 80
 
 class ELM:
   def __init__(self,w=None,b=None,beta=None, hidden_nodes=80):
