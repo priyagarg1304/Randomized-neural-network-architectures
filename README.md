@@ -9,12 +9,14 @@ RVFL is a RNNA introduced in 1994. It consists of an input layer, hidden layer a
 
 ![RVFL Structure](/Images/rvfl.png)
 
+The following code can be used for RVFL classifier. 
 ``` python
+from RVFL import RVFL
 model = RVFL()
 model.initialize_random(feature_size=20, hidden_nodes=100)
-model.fit(data, output, regularization_param=0.0312)
-predictions = model.predict(data,0.5)
-model.evaluate(predictions, output)
+model.fit(train_data, train_label, regularization_param=0.0312)
+predictions = model.predict(test_data,0.5)
+model.evaluate(predictions, test_label)
 ```
 
 ## Weighted Extreme Learning Machine - WELM
